@@ -1,3 +1,7 @@
 #!/bin/sh
 
-rhc app restart jbossticketmonster
+BASEDIR=`dirname $0`
+
+source ${BASEDIR}/env.sh
+
+rhc app restart $OPENSHIFT_APP_NAME
